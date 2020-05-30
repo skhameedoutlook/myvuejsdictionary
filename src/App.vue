@@ -6,10 +6,11 @@
         <input id="mainword"  v-model="inputText" class="form-control-plaintext" style="" /> 
         <button @click="dfd3" class="btn btn-primary" style="height: 40px; border-radius: 0;">Clear Search</button>
       </div>
-      <div v-if="disptop10" class="d-flex justify-content-center" style=" text-align: left; margin-top: 10px;">
-        <div style="width: 75%">
+      <div v-if="disptop10" class="d-flex justify-content-center" style=" text-align: left; ">
+        <div style="width: 85%;">
+          <h3 style="padding-left: 20px;">Your word could mean:</h3>
           <ul>
-            <li class="theItem" style="text-align: left;" v-for="item in top10" :key="item">{{item}}</li>
+            <li class="theItem d-flex justify-content-center" style="text-align: left;" v-for="item in top10" :key="item">{{item}}</li>
           </ul> 
         </div>    
       </div>
@@ -20,7 +21,7 @@
 </div>
 </template>
 
-<script>
+<script> 
 
 const axios = require('axios').default;
 
@@ -105,8 +106,12 @@ export default {
   width: 100%;
   background: #ecf0f1;
   border-radius: 5px;
-  margin: 10px;
-  font-size: 20px;
-  padding: 10px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 8px;
+  margin-left: -20px;
+  text-align: left;
 }
 </style>
