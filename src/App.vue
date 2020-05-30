@@ -8,7 +8,7 @@
       </div>
       <div v-if="disptop10" class="d-flex justify-content-center" style=" text-align: left; ">
         <div style="width: 85%;">
-          <h3 style="padding-left: 20px;">Your word could mean:</h3>
+          <h3 style="padding-left: 20px;">"{{inputText}}" could mean:</h3>
           <ul>
             <li class="theItem d-flex justify-content-center" style="text-align: left;" v-for="item in top10" :key="item">{{item}}</li>
           </ul> 
